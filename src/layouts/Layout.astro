@@ -39,9 +39,46 @@ const { title, description = "Premium golf cart rentals in Ocala, Florida. Explo
           </div>
           <nav class="hidden md:flex space-x-8">
             <a href="/" class="text-emerald-900 font-semibold cursor-pointer relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-emerald-500">Home</a>
-            <a href="/rentals" class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300">Rentals</a>
+            
+            <!-- Rentals Dropdown -->
+            <div class="relative group">
+              <button class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300 flex items-center">
+                Rentals
+                <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-emerald-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div class="py-2">
+                  <a href="/rentals" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">All Rentals</a>
+                  <a href="/daily-rental" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">Daily Rental</a>
+                  <a href="/weekly-rental" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">Weekly Rental</a>
+                  <a href="/monthly-rental" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">Monthly Rental</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carts Dropdown -->
+            <div class="relative group">
+              <button class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300 flex items-center">
+                Carts
+                <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-emerald-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div class="py-2">
+                  <a href="/2-passenger-golf-cart" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">2-Passenger</a>
+                  <a href="/4-passenger-golf-cart" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">4-Passenger</a>
+                  <a href="/6-passenger-golf-cart" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">6-Passenger</a>
+                  <a href="/fleet-rentals" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">Fleet Rentals</a>
+                </div>
+              </div>
+            </div>
+
             <a href="/events" class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300">Events</a>
-            <a href="/halloween-golf-cart-rental-ocala" class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300">Halloween</a>
+            
+            <!-- Featured Halloween -->
+            <a href="/halloween-golf-cart-rental-ocala" class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold hover:bg-orange-600 transition-colors duration-300">
+              🎃 Halloween
+            </a>
+            
             <a href="/about" class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300">About</a>
             <a href="/contact" class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300">Contact</a>
           </nav>
