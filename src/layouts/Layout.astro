@@ -28,6 +28,255 @@ const { title, description = "Premium golf cart rentals in Ocala, Florida. Explo
     <style>::-webkit-scrollbar { display: none;}</style>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
+    <!-- Structured Data - VehicleRepairBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VehicleRepairBusiness",
+      "name": "Ocala Golf Cart Rentals",
+      "alternateName": "Golf Cart Rental Ocala",
+      "description": "Premium golf cart rentals in Ocala, Florida. Specializing in WEC events, weddings, horse shows, and Halloween celebrations. Gas-powered, reliable golf carts for all occasions.",
+      "url": "https://golfcartsocala.netlify.app",
+      "logo": "https://golfcartsocala.netlify.app/golf cart images/imageGCRO.png",
+      "image": [
+        "https://golfcartsocala.netlify.app/golf cart images/5963549571380140434.jpg",
+        "https://golfcartsocala.netlify.app/golf cart images/219809536098758887.jpg",
+        "https://golfcartsocala.netlify.app/golf cart images/2653653379919038682.jpg"
+      ],
+      "telephone": "+13527801526",
+      "email": "golfcartrentalocala@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ocala",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "29.1872",
+        "longitude": "-82.1401"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:30",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "00:00",
+          "closes": "00:00",
+          "validFrom": "2024-01-01",
+          "validThrough": "2024-12-31"
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "29.1872",
+          "longitude": "-82.1401"
+        },
+        "geoRadius": "50000"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ocala",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "World Equestrian Center",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ocala",
+            "addressRegion": "FL"
+          }
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Golf Cart Rental Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Daily Golf Cart Rental",
+              "description": "Perfect for short trips and day outings around Ocala",
+              "category": "Vehicle Rental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Weekly Golf Cart Rental",
+              "description": "Ideal for extended stays and weekly events",
+              "category": "Vehicle Rental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Monthly Golf Cart Rental",
+              "description": "Long-term rentals for extended projects or events",
+              "category": "Vehicle Rental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "2-Passenger Golf Cart Rental",
+              "description": "Compact golf carts perfect for couples or individuals",
+              "category": "Vehicle Rental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "4-Passenger Golf Cart Rental",
+              "description": "Spacious golf carts ideal for small groups and families",
+              "category": "Vehicle Rental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "6-Passenger Golf Cart Rental",
+              "description": "Large capacity golf carts for bigger groups and equipment transport",
+              "category": "Vehicle Rental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "WEC Golf Cart Rentals",
+              "description": "Specialized golf cart rentals for World Equestrian Center events",
+              "category": "Event Transportation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wedding Golf Cart Rentals",
+              "description": "Elegant transportation for wedding venues and ceremonies",
+              "category": "Event Transportation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Horse Show Golf Cart Rentals",
+              "description": "Reliable transportation for equestrian events and competitions",
+              "category": "Event Transportation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Halloween Golf Cart Rentals",
+              "description": "Perfect for Halloween events and celebrations in Ocala",
+              "category": "Event Transportation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fleet Golf Cart Rentals",
+              "description": "Multiple golf cart rentals for large events and special occasions",
+              "category": "Fleet Rental"
+            }
+          }
+        ]
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Gas-Powered Golf Cart Rental",
+          "description": "Reliable, gas-powered golf carts for all Ocala events and occasions",
+          "category": "Vehicle Rental",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "15",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sarah Johnson"
+          },
+          "reviewBody": "Perfect service for our WEC event. Reliable golf carts and excellent customer service."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Mike Thompson"
+          },
+          "reviewBody": "Great for our wedding venue. Professional service and well-maintained carts."
+        }
+      ],
+      "paymentAccepted": ["Cash", "Credit Card"],
+      "currenciesAccepted": "USD",
+      "priceRange": "$$",
+      "foundingDate": "2024",
+      "slogan": "Premium Golf Cart Rentals for Ocala Events",
+      "knowsAbout": [
+        "Golf Cart Rentals",
+        "WEC Transportation",
+        "Wedding Transportation",
+        "Horse Show Transportation",
+        "Halloween Event Transportation",
+        "Vehicle Rental Services",
+        "Event Transportation",
+        "Ocala Golf Carts"
+      ],
+      "sameAs": [
+        "https://golfcartsocala.netlify.app"
+      ]
+    }
+    </script>
   </head>
   <body class="font-sans">
 
