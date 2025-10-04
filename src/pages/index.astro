@@ -5,7 +5,11 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Ocala Golf Cart Rentals - Premium Golf Cart Rentals in Ocala, Florida">
   <section id="hero" class="relative bg-gradient-to-br from-emerald-50 via-white to-emerald-50 h-[700px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23065f46" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-    <div class="relative max-w-6xl mx-auto px-6 text-center">
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="/golf cart images/5963549571380140434.jpg" alt="Premium Golf Carts in Ocala" class="w-full h-full object-cover opacity-10">
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6 text-center z-10">
       <div class="mb-8">
         <span class="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">Premium Transportation Solutions</span>
       </div>
@@ -105,6 +109,77 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-neutral-600 text-sm mb-2">Spooky celebrations & haunted tours</p>
           <p class="text-emerald-600 text-xs font-semibold">October Specials</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Showcase Section -->
+  <section id="fleet" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">Our Fleet</span>
+        <h2 class="text-5xl font-bold text-emerald-900 mb-6">Premium Golf Cart Fleet</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Well-maintained, gas-powered golf carts perfect for all your Ocala adventures</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="relative overflow-hidden">
+            <img src="/golf cart images/219809536098758887.jpg" alt="4-Passenger Golf Cart" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">4-Passenger</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-emerald-900 mb-3">Standard Golf Cart</h3>
+            <p class="text-neutral-600 mb-4">Perfect for couples and small groups exploring Ocala's attractions</p>
+            <ul class="text-sm text-gray-500 space-y-1">
+              <li>• Gas-powered reliability</li>
+              <li>• 4-passenger capacity</li>
+              <li>• Weather protection</li>
+              <li>• Easy to drive</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="relative overflow-hidden">
+            <img src="/golf cart images/2653653379919038682.jpg" alt="6-Passenger Golf Cart" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">6-Passenger</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-emerald-900 mb-3">Family Golf Cart</h3>
+            <p class="text-neutral-600 mb-4">Ideal for families and larger groups wanting to explore together</p>
+            <ul class="text-sm text-gray-500 space-y-1">
+              <li>• Gas-powered reliability</li>
+              <li>• 6-passenger capacity</li>
+              <li>• Spacious seating</li>
+              <li>• Perfect for events</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="relative overflow-hidden">
+            <img src="/golf cart images/3844609223195681126.jpg" alt="Premium Golf Cart" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Premium</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-emerald-900 mb-3">Premium Golf Cart</h3>
+            <p class="text-neutral-600 mb-4">Top-quality golf cart for special occasions and events</p>
+            <ul class="text-sm text-gray-500 space-y-1">
+              <li>• Gas-powered reliability</li>
+              <li>• 4-6 passenger capacity</li>
+              <li>• Premium features</li>
+              <li>• Perfect for events</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/rentals" class="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-emerald-700 hover:to-emerald-800 transform hover:scale-105 transition-all duration-300 shadow-lg inline-block">
+          <i class="fa-solid fa-eye mr-2"></i>
+          View All Golf Carts
+        </a>
       </div>
     </div>
   </section>
