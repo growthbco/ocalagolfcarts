@@ -96,6 +96,42 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Location-Specific Pages - High Priority -->
+  <url>
+    <loc>https://golfcartrentalocala.com/downtown-ocala-golf-cart-rental</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://golfcartrentalocala.com/otow-golf-cart-rental</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://golfcartrentalocala.com/stone-creek-golf-cart-rental</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://golfcartrentalocala.com/golden-ocala-golf-cart-rental</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://golfcartrentalocala.com/ocala-country-club-golf-cart-rental</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Fleet and Events Pages - Medium Priority -->
   <url>
     <loc>https://golfcartrentalocala.com/fleet-rentals</loc>
