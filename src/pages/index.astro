@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Ocala Golf Cart Rentals - Premium Golf Cart Rentals in Ocala, Florida">
+  <section id="hero" class="relative bg-gradient-to-br from-emerald-50 via-white to-emerald-50 h-[700px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23065f46" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+    <div class="relative max-w-6xl mx-auto px-6 text-center">
+      <div class="mb-8">
+        <span class="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">Premium Transportation Solutions</span>
+      </div>
+      <h2 class="text-6xl font-bold text-emerald-900 mb-6 leading-tight">Premium Golf Cart <br><span class="text-emerald-600">Rentals in Ocala</span></h2>
+      <p class="text-xl text-neutral-600 mb-10 max-w-3xl mx-auto leading-relaxed">Experience unmatched convenience and comfort with our premium golf cart fleet. Perfect for exploring Ocala's beautiful attractions, horse country, and historic downtown.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/rentals" class="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-emerald-700 hover:to-emerald-800 transform hover:scale-105 transition-all duration-300 shadow-lg">
+          <i class="fa-solid fa-calendar-check mr-2"></i>
+          Rent Today
+        </a>
+        <a href="/contact" class="border-2 border-emerald-600 text-emerald-700 px-10 py-4 rounded-full text-lg font-semibold hover:bg-emerald-600 hover:text-white transform hover:scale-105 transition-all duration-300">
+          <i class="fa-solid fa-eye mr-2"></i>
+          View Fleet
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <i class="fa-solid fa-chevron-down text-emerald-500 text-xl"></i>
+    </div>
+  </section>
+
+  <section id="rentals" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">Flexible Options</span>
+        <h2 class="text-5xl font-bold text-emerald-900 mb-6">Rental Options</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Choose from our flexible rental periods designed to perfectly suit your unique needs and timeline</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group bg-white border border-emerald-100 rounded-2xl p-8 text-center hover:shadow-2xl hover:border-emerald-200 transition-all duration-500 transform hover:-translate-y-2">
+          <div class="w-20 h-20 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-clock text-emerald-600 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-emerald-900 mb-3">Daily Rental</h3>
+          <p class="text-neutral-600 mb-6 leading-relaxed">Perfect for short trips, day outings, and spontaneous adventures around Ocala</p>
+          <div class="text-4xl font-bold text-emerald-700 mb-8">$85<span class="text-lg text-neutral-500 font-normal">/day</span></div>
+          <a href="/contact" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-4 rounded-xl font-semibold hover:from-emerald-700 hover:to-emerald-800 transform hover:scale-105 transition-all duration-300 shadow-lg block text-center">
+            Book Daily
+          </a>
+        </div>
+        <div class="group bg-gradient-to-br from-emerald-50 to-white border-2 border-emerald-200 rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">POPULAR</div>
+          <div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+            <i class="fa-solid fa-calendar-week text-white text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-emerald-900 mb-3">Weekly Rental</h3>
+          <p class="text-neutral-600 mb-6 leading-relaxed">Exceptional value for extended stays, vacations, and longer projects in Ocala</p>
+          <div class="text-4xl font-bold text-emerald-700 mb-8">$450<span class="text-lg text-neutral-500 font-normal">/week</span></div>
+          <a href="/contact" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-4 rounded-xl font-semibold hover:from-emerald-700 hover:to-emerald-800 transform hover:scale-105 transition-all duration-300 shadow-lg block text-center">
+            Book Weekly
+          </a>
+        </div>
+        <div class="group bg-white border border-emerald-100 rounded-2xl p-8 text-center hover:shadow-2xl hover:border-emerald-200 transition-all duration-500 transform hover:-translate-y-2">
+          <div class="w-20 h-20 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-calendar-alt text-emerald-600 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-emerald-900 mb-3">Monthly Rental</h3>
+          <p class="text-neutral-600 mb-6 leading-relaxed">Unbeatable rates for long-term needs, seasonal stays, and business use</p>
+          <div class="text-4xl font-bold text-emerald-700 mb-8">$1,500<span class="text-lg text-neutral-500 font-normal">/month</span></div>
+          <a href="/contact" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-4 rounded-xl font-semibold hover:from-emerald-700 hover:to-emerald-800 transform hover:scale-105 transition-all duration-300 shadow-lg block text-center">
+            Book Monthly
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="locations" class="py-20 bg-gradient-to-br from-emerald-50 to-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">Explore Ocala</span>
+        <h2 class="text-5xl font-bold text-emerald-900 mb-6">Popular Destinations</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Discover Ocala's most beautiful spots with our golf carts</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+            <i class="fa-solid fa-water text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-emerald-900 mb-3">Silver Springs</h3>
+          <p class="text-neutral-600 text-sm mb-2">Crystal-clear springs & nature trails</p>
+          <p class="text-emerald-600 text-xs font-semibold">State Park Adventure</p>
+        </div>
+        <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+            <i class="fa-solid fa-building text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-emerald-900 mb-3">Historic Downtown</h3>
+          <p class="text-neutral-600 text-sm mb-2">Charming shops & local restaurants</p>
+          <p class="text-emerald-600 text-xs font-semibold">City Center Hub</p>
+        </div>
+        <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+            <i class="fa-solid fa-horse text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-emerald-900 mb-3">Horse Country</h3>
+          <p class="text-neutral-600 text-sm mb-2">Beautiful farms & equestrian facilities</p>
+          <p class="text-emerald-600 text-xs font-semibold">Horse Capital of the World</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">Client Testimonials</span>
+        <h2 class="text-5xl font-bold text-emerald-900 mb-6">Customer Reviews</h2>
+        <p class="text-xl text-neutral-600 max-w-2xl mx-auto">Discover why our customers consistently choose us for their golf cart rental needs in Ocala</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full mr-4 border-2 border-emerald-100 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">SJ</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-emerald-900">Sarah Johnson</h4>
+              <div class="flex text-emerald-500 mb-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-xs text-neutral-500">Verified Customer</p>
+            </div>
+          </div>
+          <p class="text-neutral-600 leading-relaxed italic">"Absolutely exceptional service! The golf cart was immaculate and perfect for exploring Ocala's beautiful downtown and Silver Springs. Will definitely rent again!"</p>
+        </div>
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full mr-4 border-2 border-emerald-100 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">MD</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-emerald-900">Mike Davis</h4>
+              <div class="flex text-emerald-500 mb-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-xs text-neutral-500">Verified Customer</p>
+            </div>
+          </div>
+          <p class="text-neutral-600 leading-relaxed italic">"Outstanding for our wedding! The professional team went above and beyond, and the carts added such a charming element to our special day in Ocala."</p>
+        </div>
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full mr-4 border-2 border-emerald-100 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">LC</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-emerald-900">Lisa Chen</h4>
+              <div class="flex text-emerald-500 mb-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-xs text-neutral-500">Verified Customer</p>
+            </div>
+          </div>
+          <p class="text-neutral-600 leading-relaxed italic">"Incredibly convenient booking process and transparent pricing. The monthly rental was perfect for our extended stay in Ocala. Exceptional customer service!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

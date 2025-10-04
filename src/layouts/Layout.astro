@@ -1,0 +1,111 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Premium golf cart rentals in Ocala, Florida. Explore Ocala in style with our reliable and comfortable golf carts." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans">
+
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+              <i class="fa-solid fa-golf-ball text-white text-lg"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-emerald-900">Ocala Golf Carts</h1>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="/" class="text-emerald-900 font-semibold cursor-pointer relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-emerald-500">Home</a>
+            <a href="/rentals" class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300">Rentals</a>
+            <a href="/about" class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300">About</a>
+            <a href="/contact" class="text-neutral-600 hover:text-emerald-700 cursor-pointer transition-colors duration-300">Contact</a>
+          </nav>
+          <a href="/contact" class="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-3 rounded-full font-semibold hover:from-emerald-700 hover:to-emerald-800 transform hover:scale-105 transition-all duration-300 shadow-lg">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home" class="bg-white pt-20">
+      <slot />
+    </main>
+
+    <footer id="footer" class="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div>
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                <i class="fa-solid fa-golf-ball text-emerald-900 text-lg"></i>
+              </div>
+              <h3 class="text-2xl font-bold">Ocala Golf Carts</h3>
+            </div>
+            <p class="text-emerald-100 leading-relaxed mb-6">Premium golf cart rentals delivering unmatched quality and service for all your transportation needs in Ocala, Florida.</p>
+            <div class="flex space-x-4">
+              <div class="w-10 h-10 bg-emerald-700 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors duration-300 cursor-pointer">
+                <i class="fa-brands fa-facebook text-white"></i>
+              </div>
+              <div class="w-10 h-10 bg-emerald-700 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors duration-300 cursor-pointer">
+                <i class="fa-brands fa-instagram text-white"></i>
+              </div>
+              <div class="w-10 h-10 bg-emerald-700 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors duration-300 cursor-pointer">
+                <i class="fa-brands fa-twitter text-white"></i>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Services</h4>
+            <ul class="space-y-3 text-emerald-100">
+              <li><a href="/rentals" class="hover:text-white cursor-pointer transition-colors duration-300">Daily Rentals</a></li>
+              <li><a href="/rentals" class="hover:text-white cursor-pointer transition-colors duration-300">Weekly Rentals</a></li>
+              <li><a href="/rentals" class="hover:text-white cursor-pointer transition-colors duration-300">Monthly Rentals</a></li>
+              <li><a href="/contact" class="hover:text-white cursor-pointer transition-colors duration-300">Event Rentals</a></li>
+              <li><a href="/contact" class="hover:text-white cursor-pointer transition-colors duration-300">Fleet Services</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Locations</h4>
+            <ul class="space-y-3 text-emerald-100">
+              <li>Silver Springs</li>
+              <li>Historic Downtown</li>
+              <li>Horse Country</li>
+              <li>Ocala City Center</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+            <div class="space-y-4 text-emerald-100">
+              <p class="flex items-center"><i class="fa-solid fa-phone mr-3 text-emerald-300"></i>(555) 123-4567</p>
+              <p class="flex items-center"><i class="fa-solid fa-envelope mr-3 text-emerald-300"></i>info@ocalagolfcarts.com</p>
+              <p class="flex items-center"><i class="fa-solid fa-clock mr-3 text-emerald-300"></i>24/7 Support</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-emerald-700 pt-8 text-center text-emerald-200">
+          <p>&copy; 2024 Ocala Golf Cart Rentals. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
