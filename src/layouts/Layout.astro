@@ -120,62 +120,62 @@ const { title, description = "Premium golf cart rentals in Ocala, Florida. Explo
     </header>
 
     <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 right-0 bg-white border-b border-emerald-100 shadow-lg z-40 transform -translate-y-full transition-transform duration-300">
+    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 right-0 bg-gradient-to-br from-emerald-600 to-emerald-700 border-b border-emerald-500 shadow-lg z-40 transform -translate-y-full transition-transform duration-300">
       <div class="px-6 py-4 space-y-4">
         <!-- Main Navigation -->
         <div class="space-y-3">
-          <a href="/" class="block text-emerald-900 font-semibold py-2 border-b border-emerald-100">Home</a>
+          <a href="/" class="block text-white font-semibold py-2 border-b border-emerald-400">Home</a>
           
           <!-- Rentals Section -->
           <div>
-            <div class="text-emerald-700 font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('rentals')">
+            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('rentals')">
               Rentals <i class="fa-solid fa-chevron-down" id="rentals-chevron"></i>
             </div>
             <div id="rentals-dropdown" class="hidden pl-4 space-y-2 mt-2">
-              <a href="/rentals" class="block text-gray-700 py-1">All Rentals</a>
-              <a href="/daily-rental" class="block text-gray-700 py-1">Daily Rental</a>
-              <a href="/weekly-rental" class="block text-gray-700 py-1">Weekly Rental</a>
-              <a href="/monthly-rental" class="block text-gray-700 py-1">Monthly Rental</a>
+              <a href="/rentals" class="block text-emerald-100 py-1 hover:text-white transition-colors">All Rentals</a>
+              <a href="/daily-rental" class="block text-emerald-100 py-1 hover:text-white transition-colors">Daily Rental</a>
+              <a href="/weekly-rental" class="block text-emerald-100 py-1 hover:text-white transition-colors">Weekly Rental</a>
+              <a href="/monthly-rental" class="block text-emerald-100 py-1 hover:text-white transition-colors">Monthly Rental</a>
             </div>
           </div>
 
           <!-- Carts Section -->
           <div>
-            <div class="text-emerald-700 font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('carts')">
+            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('carts')">
               Carts <i class="fa-solid fa-chevron-down" id="carts-chevron"></i>
             </div>
             <div id="carts-dropdown" class="hidden pl-4 space-y-2 mt-2">
-              <a href="/2-passenger-golf-cart" class="block text-gray-700 py-1">2-Passenger</a>
-              <a href="/4-passenger-golf-cart" class="block text-gray-700 py-1">4-Passenger</a>
-              <a href="/6-passenger-golf-cart" class="block text-gray-700 py-1">6-Passenger</a>
-              <a href="/fleet-rentals" class="block text-gray-700 py-1">Fleet Rentals</a>
+              <a href="/2-passenger-golf-cart" class="block text-emerald-100 py-1 hover:text-white transition-colors">2-Passenger</a>
+              <a href="/4-passenger-golf-cart" class="block text-emerald-100 py-1 hover:text-white transition-colors">4-Passenger</a>
+              <a href="/6-passenger-golf-cart" class="block text-emerald-100 py-1 hover:text-white transition-colors">6-Passenger</a>
+              <a href="/fleet-rentals" class="block text-emerald-100 py-1 hover:text-white transition-colors">Fleet Rentals</a>
             </div>
           </div>
 
           <!-- Events Section -->
           <div>
-            <div class="text-emerald-700 font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('events')">
+            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('events')">
               Events <i class="fa-solid fa-chevron-down" id="events-chevron"></i>
             </div>
             <div id="events-dropdown" class="hidden pl-4 space-y-2 mt-2">
-              <a href="/events" class="block text-gray-700 py-1">All Events</a>
-              <a href="/wec-golf-carts" class="block text-gray-700 py-1">WEC Golf Carts</a>
-              <a href="/halloween-golf-cart-rental-ocala" class="block text-gray-700 py-1">Halloween Events</a>
+              <a href="/events" class="block text-emerald-100 py-1 hover:text-white transition-colors">All Events</a>
+              <a href="/wec-golf-carts" class="block text-emerald-100 py-1 hover:text-white transition-colors">WEC Golf Carts</a>
+              <a href="/halloween-golf-cart-rental-ocala" class="block text-emerald-100 py-1 hover:text-white transition-colors">Halloween Events</a>
             </div>
           </div>
 
-          <a href="/halloween-golf-cart-rental-ocala" class="block bg-orange-500 text-white px-4 py-2 rounded-full text-center font-semibold mt-4">🎃 Halloween</a>
-          <a href="/about" class="block text-gray-700 py-2">About</a>
-          <a href="/contact" class="block text-gray-700 py-2">Contact</a>
+          <a href="/halloween-golf-cart-rental-ocala" class="block bg-white text-orange-600 px-4 py-2 rounded-full text-center font-semibold mt-4 hover:bg-orange-50 transition-colors">🎃 Halloween</a>
+          <a href="/about" class="block text-emerald-100 py-2 hover:text-white transition-colors">About</a>
+          <a href="/contact" class="block text-emerald-100 py-2 hover:text-white transition-colors">Contact</a>
         </div>
 
         <!-- Mobile Contact Actions -->
-        <div class="pt-4 border-t border-emerald-100 space-y-3">
-          <a href="tel:+13527801526" class="flex items-center text-emerald-700 font-semibold">
+        <div class="pt-4 border-t border-emerald-400 space-y-3">
+          <a href="tel:+13527801526" class="flex items-center text-white font-semibold">
             <i class="fa-solid fa-phone mr-2"></i>
             (352) 780-1526
           </a>
-          <a href="/contact" class="block bg-emerald-600 text-white px-4 py-3 rounded-full text-center font-semibold hover:bg-emerald-700 transition-colors">
+          <a href="/contact" class="block bg-white text-emerald-600 px-4 py-3 rounded-full text-center font-semibold hover:bg-emerald-50 transition-colors">
             Book Now
           </a>
         </div>
