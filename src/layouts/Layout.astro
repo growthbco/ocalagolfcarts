@@ -2,9 +2,12 @@
 export interface Props {
   title: string;
   description?: string;
+  image?: string;
+  type?: string;
 }
 
-const { title, description = "Premium golf cart rentals in Ocala, Florida. Explore Ocala in style with our reliable and comfortable golf carts." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { title, description = "Premium golf cart rentals in Ocala, Florida. Explore Ocala in style with our reliable and comfortable golf carts.", image = "https://golfcartrentalocala.com/golf cart images/imageGCRO.png", type = "website" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,6 +17,25 @@ const { title, description = "Premium golf cart rentals in Ocala, Florida. Explo
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="nJnGj021IbbPim2Lmz7Ff98B68nZCrPq6SeUTADEk5Y" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="Ocala Golf Cart Rentals" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    
     <link rel="icon" type="image/png" href="/golf cart images/gcrofavicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,9 +62,9 @@ const { title, description = "Premium golf cart rentals in Ocala, Florida. Explo
       "url": "https://golfcartrentalocala.com",
       "logo": "https://golfcartrentalocala.com/golf cart images/imageGCRO.png",
       "image": [
-        "https://golfcartrentalocala.com/golf cart images/5963549571380140434.jpg",
-        "https://golfcartrentalocala.com/golf cart images/219809536098758887.jpg",
-        "https://golfcartrentalocala.com/golf cart images/2653653379919038682.jpg"
+        "https://golfcartrentalocala.com/golf cart images/ocala-golf-cart-fleet.jpg",
+        "https://golfcartrentalocala.com/golf cart images/4-passenger-golf-cart-ocala.jpg",
+        "https://golfcartrentalocala.com/golf cart images/6-passenger-golf-cart-ocala.jpg"
       ],
       "telephone": "+13527801526",
       "email": "golfcartrentalocala@gmail.com",

@@ -5,7 +5,7 @@ import { sitemapConfig } from './src/sitemap-config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ocalagolfcartrentals.com',
+  site: 'https://golfcartrentalocala.com',
   integrations: [
     tailwind(), 
     sitemap({
