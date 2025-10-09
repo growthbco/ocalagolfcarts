@@ -59,6 +59,42 @@ export const sitemapConfig: Record<string, SitemapConfig> = {
     priority: 0.7,
     changefreq: 'monthly'
   },
+  '/horse-show-golf-cart-rental/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/hits-golf-cart-rental-ocala/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/corporate-event-golf-cart-rental-ocala/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/golf-tournament-cart-rental-ocala/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/birthday-party-golf-cart-rental-ocala/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/graduation-party-golf-cart-rental-ocala/': {
+    priority: 0.7,
+    changefreq: 'yearly'
+  },
+  '/festival-golf-cart-rental-ocala/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/christmas-golf-cart-rental-ocala/': {
+    priority: 0.7,
+    changefreq: 'yearly'
+  },
+  '/july-4th-golf-cart-rental-ocala/': {
+    priority: 0.7,
+    changefreq: 'yearly'
+  },
   '/halloween-golf-cart-rental-ocala/': {
     priority: 0.7,
     changefreq: 'yearly'
