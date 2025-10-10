@@ -3,6 +3,63 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Ocala Golf Cart Rentals - Best Golf Cart Rental Company Ocala | Premium Rentals" description="Premium golf cart rentals in Ocala, FL for WEC events, weddings, horse shows & more. Daily, weekly & monthly rentals. Gas-powered carts. Call (352) 780-1526 today!">
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does it cost to rent a golf cart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our competitive rates start with a 3-day minimum, weekly, and monthly options available. Special event pricing and custom packages are available. Call us for personalized quotes based on your specific needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve in Ocala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve all of Ocala and surrounding areas including OTOW, Stone Creek, Golden Ocala, Downtown Ocala, and communities within a 30-mile radius. Free delivery available to most locations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your golf carts gas or electric?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All our rental carts are gas-powered for maximum reliability and convenience. No battery charging required - just fill up with gas and go!"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you deliver and pickup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We provide free delivery and pickup within Ocala city limits. Extended delivery areas may have a small fee. We'll coordinate pickup and delivery times that work with your schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I need to rent a golf cart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You'll need a valid driver's license and must be 18 years or older. We'll also require a security deposit. No special permits needed for golf cart rentals in Ocala."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I rent for special events like WEC or weddings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! We specialize in event rentals including WEC events, weddings, Halloween celebrations, and horse shows. We offer fleet rentals and custom packages for large events."
+        }
+      }
+    ]
+  }
+  </script>
   <section id="hero" class="relative bg-gradient-to-br from-emerald-50 via-white to-emerald-50 h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23065f46" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
     <!-- Hero Background Image -->

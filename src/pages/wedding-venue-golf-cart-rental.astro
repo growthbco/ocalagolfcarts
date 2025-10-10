@@ -31,6 +31,48 @@ import Layout from '../layouts/Layout.astro';
     }
   }
   </script>
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://golfcartrentalocala.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Events",
+        "item": "https://golfcartrentalocala.com/events"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Wedding Golf Cart Rentals",
+        "item": "https://golfcartrentalocala.com/wedding-venue-golf-cart-rental"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-white border-b border-gray-200 py-3">
+    <div class="max-w-6xl mx-auto px-6">
+      <ol class="flex items-center space-x-2 text-sm">
+        <li><a href="/" class="text-emerald-600 hover:text-emerald-700">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/events" class="text-emerald-600 hover:text-emerald-700">Events</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-600">Wedding Rentals</li>
+      </ol>
+    </div>
+  </nav>
+  
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

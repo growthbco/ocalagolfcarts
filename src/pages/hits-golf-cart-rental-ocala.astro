@@ -3,6 +3,47 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="HITS Golf Cart Rentals Ocala | Horse Show Transportation | Post Time Farm" description="Rent golf carts for HITS horse shows in Ocala. Multi-day packages, venue delivery, & reliable gas-powered carts for competitors, spectators & vendors. Book now!">
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://golfcartrentalocala.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Events",
+        "item": "https://golfcartrentalocala.com/events"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "HITS Golf Cart Rentals",
+        "item": "https://golfcartrentalocala.com/hits-golf-cart-rental-ocala"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-white border-b border-gray-200 py-3">
+    <div class="max-w-6xl mx-auto px-6">
+      <ol class="flex items-center space-x-2 text-sm">
+        <li><a href="/" class="text-emerald-600 hover:text-emerald-700">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/events" class="text-emerald-600 hover:text-emerald-700">Events</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-600">HITS Golf Carts</li>
+      </ol>
+    </div>
+  </nav>
+  
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-16 relative overflow-hidden">
     <div class="absolute inset-0 bg-black opacity-20"></div>
