@@ -5,6 +5,18 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Exclude sitemaps and static files from SPA redirect
+[[redirects]]
+  from = "/sitemap-*.xml"
+  to = "/sitemap-:splat.xml"
+  status = 200
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+# SPA fallback for all other routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
