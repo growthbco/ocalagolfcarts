@@ -3,6 +3,34 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Birthday Party Golf Cart Rentals Ocala | Celebration Transportation" description="Make birthdays special with golf cart rentals in Ocala! Perfect for kids' parties, milestone birthdays & surprise celebrations. Fun, unique & memorable. Book today!">
+  <!-- Event Schema for Birthday Parties -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Birthday Party Golf Cart Rental",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Ocala Golf Cart Rentals",
+      "telephone": "+13527801526",
+      "url": "https://golfcartrentalocala.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Ocala",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Florida"
+      }
+    },
+    "description": "Golf cart rentals for birthday parties in Ocala. Perfect for kids' parties, milestone birthdays, and celebrations.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-700 text-white py-16 relative overflow-hidden">
     <div class="absolute inset-0 bg-black opacity-20"></div>
@@ -276,6 +304,39 @@ import Layout from '../layouts/Layout.astro';
         <a href="tel:3527801526" class="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-8 py-4 rounded-lg font-semibold text-lg transform hover:scale-105 transition-all duration-300">
           <i class="fa-solid fa-phone mr-2"></i>
           Call (352) 780-1526
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Events Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">More Event Rentals</h2>
+        <p class="text-lg text-gray-600">Explore our other specialized event golf cart rentals</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/graduation-party-golf-cart-rental-ocala" class="group bg-gradient-to-br from-indigo-50 to-white border border-indigo-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-graduation-cap text-indigo-600 text-xl"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Graduation Parties</h3>
+          <p class="text-gray-600 text-sm">Perfect for grad celebrations</p>
+        </a>
+        <a href="/wedding-venue-golf-cart-rental" class="group bg-gradient-to-br from-pink-50 to-white border border-pink-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-heart text-pink-600 text-xl"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Wedding Venues</h3>
+          <p class="text-gray-600 text-sm">Elegant wedding transportation</p>
+        </a>
+        <a href="/corporate-event-golf-cart-rental-ocala" class="group bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-briefcase text-slate-600 text-xl"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Corporate Events</h3>
+          <p class="text-gray-600 text-sm">Professional business rentals</p>
         </a>
       </div>
     </div>

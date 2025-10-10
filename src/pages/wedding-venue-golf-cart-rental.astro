@@ -3,6 +3,34 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Wedding Golf Cart Rentals Ocala | Wedding Venue Transportation | Ocala Golf Carts">
+  <!-- Event Schema for Weddings -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Wedding Golf Cart Rental",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Ocala Golf Cart Rentals",
+      "telephone": "+13527801526",
+      "url": "https://golfcartrentalocala.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Ocala",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Florida"
+      }
+    },
+    "description": "Elegant golf cart rentals for weddings and wedding venues in Ocala. Professional service for ceremonies and receptions.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -165,6 +193,39 @@ import Layout from '../layouts/Layout.astro';
         <a href="/contact" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-emerald-600 transform hover:scale-105 transition-all duration-300">
           <i class="fa-solid fa-envelope mr-2"></i>
           Get Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Events Section -->
+  <section class="py-16 bg-gradient-to-br from-emerald-50 to-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Other Special Events</h2>
+        <p class="text-lg text-gray-600">We specialize in various event types</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/birthday-party-golf-cart-rental-ocala" class="group bg-gradient-to-br from-pink-50 to-white border border-pink-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-cake-candles text-pink-600 text-xl"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Birthday Parties</h3>
+          <p class="text-gray-600 text-sm">Make birthdays memorable</p>
+        </a>
+        <a href="/graduation-party-golf-cart-rental-ocala" class="group bg-gradient-to-br from-indigo-50 to-white border border-indigo-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-graduation-cap text-indigo-600 text-xl"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Graduations</h3>
+          <p class="text-gray-600 text-sm">Celebrate achievements</p>
+        </a>
+        <a href="/corporate-event-golf-cart-rental-ocala" class="group bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-briefcase text-slate-600 text-xl"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Corporate Events</h3>
+          <p class="text-gray-600 text-sm">Business event solutions</p>
         </a>
       </div>
     </div>
