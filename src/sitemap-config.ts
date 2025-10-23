@@ -67,6 +67,10 @@ export const sitemapConfig: Record<string, SitemapConfig> = {
     priority: 0.7,
     changefreq: 'monthly'
   },
+  '/4-passenger-deluxe-golf-cart/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
   '/horse-show-golf-cart-rental/': {
     priority: 0.7,
     changefreq: 'monthly'
