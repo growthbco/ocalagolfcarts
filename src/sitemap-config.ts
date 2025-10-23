@@ -33,6 +33,10 @@ export const sitemapConfig: Record<string, SitemapConfig> = {
     priority: 0.8,
     changefreq: 'monthly'
   },
+  '/2-passenger-deluxe-golf-cart/': {
+    priority: 0.8,
+    changefreq: 'monthly'
+  },
   '/4-passenger-golf-cart/': {
     priority: 0.8,
     changefreq: 'monthly'
