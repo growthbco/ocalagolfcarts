@@ -16,6 +16,42 @@
   to = "/robots.txt"
   status = 200
 
+# Cart page redirects for SEO
+[[redirects]]
+  from = "/2-passenger-golf-cart"
+  to = "/2-passenger-golf-cart-rental-ocala"
+  status = 301
+
+[[redirects]]
+  from = "/2-passenger-deluxe-golf-cart"
+  to = "/2-passenger-deluxe-golf-cart-rental-ocala"
+  status = 301
+
+[[redirects]]
+  from = "/4-passenger-golf-cart"
+  to = "/4-passenger-golf-cart-rental-ocala"
+  status = 301
+
+[[redirects]]
+  from = "/4-passenger-deluxe-golf-cart"
+  to = "/4-passenger-deluxe-golf-cart-rental-ocala"
+  status = 301
+
+[[redirects]]
+  from = "/6-passenger-golf-cart"
+  to = "/6-passenger-golf-cart-rental-ocala"
+  status = 301
+
+[[redirects]]
+  from = "/lifted-4-passenger-golf-cart"
+  to = "/lifted-4-passenger-golf-cart-rental-ocala"
+  status = 301
+
+[[redirects]]
+  from = "/utility-golf-cart-rental"
+  to = "/utility-golf-cart-rental-ocala"
+  status = 301
+
 # SPA fallback for all other routes
 [[redirects]]
   from = "/*"

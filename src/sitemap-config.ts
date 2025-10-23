@@ -29,19 +29,19 @@ export const sitemapConfig: Record<string, SitemapConfig> = {
   },
   
   // Fleet/Vehicle pages - high priority
-  '/2-passenger-golf-cart/': {
+  '/2-passenger-golf-cart-rental-ocala/': {
     priority: 0.8,
     changefreq: 'monthly'
   },
-  '/2-passenger-deluxe-golf-cart/': {
+  '/2-passenger-deluxe-golf-cart-rental-ocala/': {
     priority: 0.8,
     changefreq: 'monthly'
   },
-  '/4-passenger-golf-cart/': {
+  '/4-passenger-golf-cart-rental-ocala/': {
     priority: 0.8,
     changefreq: 'monthly'
   },
-  '/6-passenger-golf-cart/': {
+  '/6-passenger-golf-cart-rental-ocala/': {
     priority: 0.8,
     changefreq: 'monthly'
   },
@@ -63,15 +63,15 @@ export const sitemapConfig: Record<string, SitemapConfig> = {
     priority: 0.7,
     changefreq: 'monthly'
   },
-  '/lifted-4-passenger-golf-cart/': {
+  '/lifted-4-passenger-golf-cart-rental-ocala/': {
     priority: 0.7,
     changefreq: 'monthly'
   },
-  '/utility-golf-cart-rental/': {
+  '/utility-golf-cart-rental-ocala/': {
     priority: 0.7,
     changefreq: 'monthly'
   },
-  '/4-passenger-deluxe-golf-cart/': {
+  '/4-passenger-deluxe-golf-cart-rental-ocala/': {
     priority: 0.7,
     changefreq: 'monthly'
   },
