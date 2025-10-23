@@ -52,6 +52,11 @@
   to = "/utility-golf-cart-rental-ocala"
   status = 301
 
+[[redirects]]
+  from = "/daily-rental"
+  to = "/3-day-rental"
+  status = 301
+
 # SPA fallback for all other routes
 [[redirects]]
   from = "/*"
