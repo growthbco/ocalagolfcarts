@@ -54,6 +54,21 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
     <style>
       ::-webkit-scrollbar { display: none;}
       .rotate-180 { transform: rotate(180deg); }
+      /* Custom scrollbar for mobile menu */
+      #mobile-menu::-webkit-scrollbar { 
+        width: 6px;
+        display: block;
+      }
+      #mobile-menu::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      #mobile-menu::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+      }
+      #mobile-menu::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
     </style>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -463,8 +478,8 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
     </header>
 
     <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 right-0 bg-gradient-to-br from-emerald-600 to-emerald-700 border-b border-emerald-500 shadow-lg z-40 transform -translate-y-full transition-all duration-300 ease-in-out">
-      <div class="px-6 py-4 space-y-4">
+    <div id="mobile-menu" class="md:hidden fixed top-20 left-0 right-0 bottom-0 bg-gradient-to-br from-emerald-600 to-emerald-700 border-b border-emerald-500 shadow-lg z-40 transform -translate-y-full transition-all duration-300 ease-in-out overflow-y-auto">
+      <div class="px-6 py-4 space-y-4 max-h-[calc(100vh-5rem)] overflow-y-auto">
         <!-- Main Navigation -->
         <div class="space-y-3">
           <a href="/" class="block text-white font-semibold py-2 border-b border-emerald-400">Home</a>
@@ -527,7 +542,7 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
         </div>
 
         <!-- Mobile Contact Actions -->
-        <div class="pt-4 border-t border-emerald-400 space-y-3">
+        <div class="pt-4 border-t border-emerald-400 space-y-3 pb-8">
           <a href="tel:+13527801526" class="flex items-center justify-center text-white font-semibold">
             <i class="fa-solid fa-phone mr-2"></i>
             (352) 780-1526
