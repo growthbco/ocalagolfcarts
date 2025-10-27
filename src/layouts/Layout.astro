@@ -51,7 +51,10 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
       data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
       data-widget-id="68e097a02ba26c02b0bd176a"> 
     </script>
-    <style>::-webkit-scrollbar { display: none;}</style>
+    <style>
+      ::-webkit-scrollbar { display: none;}
+      .rotate-180 { transform: rotate(180deg); }
+    </style>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     
@@ -468,8 +471,8 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
           
           <!-- Rentals Section -->
           <div>
-            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('rentals')">
-              Rentals <i class="fa-solid fa-chevron-down" id="rentals-chevron"></i>
+            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" id="rentals-toggle">
+              Rentals <i class="fa-solid fa-chevron-down text-xs transition-transform" id="rentals-chevron"></i>
             </div>
             <div id="rentals-dropdown" class="hidden pl-4 space-y-2 mt-2">
               <a href="/rentals" class="block text-emerald-100 py-1 hover:text-white transition-colors">All Rentals</a>
@@ -481,8 +484,8 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
 
           <!-- Carts Section -->
           <div>
-            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('carts')">
-              Carts <i class="fa-solid fa-chevron-down" id="carts-chevron"></i>
+            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" id="carts-toggle">
+              Carts <i class="fa-solid fa-chevron-down text-xs transition-transform" id="carts-chevron"></i>
             </div>
             <div id="carts-dropdown" class="hidden pl-4 space-y-2 mt-2">
               <a href="/2-passenger-golf-cart-rental-ocala" class="block text-emerald-100 py-1 hover:text-white transition-colors">2-Passenger</a>
@@ -498,8 +501,8 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
 
           <!-- Events Section -->
           <div>
-            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" onclick="toggleMobileDropdown('events')">
-              Events <i class="fa-solid fa-chevron-down" id="events-chevron"></i>
+            <div class="text-white font-semibold py-2 flex items-center justify-between cursor-pointer" id="events-toggle">
+              Events <i class="fa-solid fa-chevron-down text-xs transition-transform" id="events-chevron"></i>
             </div>
             <div id="events-dropdown" class="hidden pl-4 space-y-2 mt-2">
               <a href="/events" class="block text-white font-semibold py-1 transition-colors">All Events</a>
@@ -663,7 +666,7 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
 
       // @ts-ignore
       // Mobile dropdown toggle functionality
-      function toggleMobileDropdown(dropdownId) {
+      function toggleMobileDropdown(dropdownId: string) {
         const dropdown = document.getElementById(dropdownId + '-dropdown');
         const chevron = document.getElementById(dropdownId + '-chevron');
         
@@ -680,6 +683,29 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
         const button = document.getElementById('mobile-menu-button');
         if (button) {
           button.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Add click handlers for mobile dropdowns
+        const rentalsToggle = document.getElementById('rentals-toggle');
+        const cartsToggle = document.getElementById('carts-toggle');
+        const eventsToggle = document.getElementById('events-toggle');
+        
+        if (rentalsToggle) {
+          rentalsToggle.addEventListener('click', function() {
+            toggleMobileDropdown('rentals');
+          });
+        }
+        
+        if (cartsToggle) {
+          cartsToggle.addEventListener('click', function() {
+            toggleMobileDropdown('carts');
+          });
+        }
+        
+        if (eventsToggle) {
+          eventsToggle.addEventListener('click', function() {
+            toggleMobileDropdown('events');
+          });
         }
         
         // Close mobile menu when clicking outside
