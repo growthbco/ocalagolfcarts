@@ -645,8 +645,9 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
       // @ts-ignore
       // Mobile dropdown toggle functionality
       function toggleMobileDropdown(dropdownId, event) {
-        if (event && event.stopPropagation) {
+        if (event) {
           event.stopPropagation();
+          event.preventDefault();
         }
         const dropdown = document.getElementById(dropdownId + '-dropdown');
         const chevron = document.getElementById(dropdownId + '-chevron');
@@ -674,15 +675,18 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
           const menu = document.getElementById('mobile-menu');
           const button = document.getElementById('mobile-menu-button');
           
-          if (menu && button && event.target) {
-            const target = event.target;
-            const targetNode = target instanceof Node ? target : null;
-            
-            if (targetNode && !menu.contains(targetNode) && !button.contains(targetNode)) {
-              menu.classList.add('-translate-y-full');
-              menu.classList.remove('translate-y-0');
-            }
+          if (!menu || !button || !event.target) return;
+          
+          const target = event.target;
+          
+          // Check if click is on the mobile menu button or inside the menu
+          if (button.contains(target) || menu.contains(target)) {
+            return; // Don't close if clicking inside menu or on button
           }
+          
+          // Close menu if clicking outside
+          menu.classList.add('-translate-y-full');
+          menu.classList.remove('translate-y-0');
         });
       });
     </script>
