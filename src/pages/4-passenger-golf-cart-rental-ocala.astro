@@ -86,20 +86,20 @@ import Layout from '../layouts/Layout.astro';
           <h2 class="text-3xl font-bold text-gray-900 mb-6">4-Passenger Golf Cart Gallery</h2>
           
           <!-- Slideshow Gallery -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
             <!-- Main Slideshow Image -->
             <div class="relative h-96 overflow-hidden">
               <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">4-Passenger</div>
               <img id="slideshow-main-4pass" src="/golf cart images/4-passenger-golf-cart-ocala.jpg" alt="4-Passenger Golf Cart Gallery" class="w-full h-full object-cover transition-opacity duration-500" />
+              
+              <!-- Navigation Arrows -->
+              <button id="prev-btn-4pass" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-emerald-600 p-3 rounded-full shadow-lg transition-all z-20">
+                <i class="fa-solid fa-chevron-left text-lg"></i>
+              </button>
+              <button id="next-btn-4pass" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-emerald-600 p-3 rounded-full shadow-lg transition-all z-20">
+                <i class="fa-solid fa-chevron-right text-lg"></i>
+              </button>
             </div>
-            
-            <!-- Navigation Arrows -->
-            <button id="prev-btn-4pass" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-600 p-2 rounded-full shadow-lg transition-all z-10">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button id="next-btn-4pass" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-600 p-2 rounded-full shadow-lg transition-all z-10">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
             
             <!-- Thumbnail Strip -->
             <div class="p-4 bg-gray-50 border-t">
