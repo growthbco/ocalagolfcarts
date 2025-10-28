@@ -254,38 +254,48 @@ import Layout from '../layouts/Layout.astro';
       const descEl = document.getElementById('image-desc');
       const thumbnails = document.querySelectorAll('.thumbnail-btn');
       
-      function updateSlide(index) {
+      function updateSlide(index: number) {
         currentSlide = index;
         const image = images[currentSlide];
-        mainImg.src = image.src;
-        mainImg.alt = image.alt;
-        titleEl.textContent = image.title;
-        descEl.textContent = image.description;
+        if (mainImg instanceof HTMLImageElement) {
+          mainImg.src = image.src;
+          mainImg.alt = image.alt;
+        }
+        if (titleEl) titleEl.textContent = image.title;
+        if (descEl) descEl.textContent = image.description;
         
         // Update thumbnails
         thumbnails.forEach((btn, i) => {
           const img = btn.querySelector('img');
-          if (i === currentSlide) {
-            btn.classList.add('active');
-            img.classList.remove('border-transparent', 'opacity-60');
-            img.classList.add('border-emerald-600', 'opacity-100');
-          } else {
-            btn.classList.remove('active');
-            img.classList.remove('border-emerald-600', 'opacity-100');
-            img.classList.add('border-transparent', 'opacity-60');
+          if (img) {
+            if (i === currentSlide) {
+              btn.classList.add('active');
+              img.classList.remove('border-transparent', 'opacity-60');
+              img.classList.add('border-emerald-600', 'opacity-100');
+            } else {
+              btn.classList.remove('active');
+              img.classList.remove('border-emerald-600', 'opacity-100');
+              img.classList.add('border-transparent', 'opacity-60');
+            }
           }
         });
       }
       
       // Next button
-      document.getElementById('next-btn').addEventListener('click', () => {
-        updateSlide((currentSlide + 1) % images.length);
-      });
+      const nextBtn = document.getElementById('next-btn');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          updateSlide((currentSlide + 1) % images.length);
+        });
+      }
       
       // Previous button
-      document.getElementById('prev-btn').addEventListener('click', () => {
-        updateSlide((currentSlide - 1 + images.length) % images.length);
-      });
+      const prevBtn = document.getElementById('prev-btn');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          updateSlide((currentSlide - 1 + images.length) % images.length);
+        });
+      }
       
       // Thumbnail clicks
       thumbnails.forEach((btn, index) => {
