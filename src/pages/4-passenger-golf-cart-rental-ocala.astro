@@ -81,43 +81,42 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         
-        <!-- Cart Images Gallery -->
+        <!-- Cart Images Gallery with Slideshow -->
         <div>
           <h2 class="text-3xl font-bold text-gray-900 mb-6">4-Passenger Golf Cart Gallery</h2>
           
-          <!-- Main Image -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
+          <!-- Slideshow Gallery -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <!-- Main Slideshow Image -->
             <div class="relative h-96 overflow-hidden">
-              <img src="/golf cart images/2 seater/1933077952967162494.jpg" alt="4-Passenger Gas Golf Cart Rental Ocala - Perfect for Retirement Communities" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">4-Passenger</div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Gas-Powered Reliability</h3>
-              <p class="text-gray-600 mb-4">Perfect for retirement communities, neighborhoods, and equestrian events. Strong, consistent power with extended range for all-day use.</p>
-            </div>
-          </div>
-
-          <!-- Additional Images Grid -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div class="relative h-48 overflow-hidden">
-                <img src="/golf cart images/2 seater/1300575849043398176.jpg" alt="4-Passenger Golf Cart Front View - LED Headlights and Modern Design" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4">
-                <h4 class="font-semibold text-gray-900 text-sm">Front View</h4>
-                <p class="text-gray-600 text-xs">LED headlights & modern design</p>
-              </div>
+              <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">4-Passenger</div>
+              <img id="slideshow-main-4pass" src="/golf cart images/4-passenger-golf-cart-ocala.jpg" alt="4-Passenger Golf Cart Gallery" class="w-full h-full object-cover transition-opacity duration-500" />
             </div>
             
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div class="relative h-48 overflow-hidden">
-                <img src="/golf cart images/2 seater/7715525047639465467.jpg" alt="4-Passenger Golf Cart Side View - Comfortable Seating and Smooth Handling" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4">
-                <h4 class="font-semibold text-gray-900 text-sm">Side View</h4>
-                <p class="text-gray-600 text-xs">Comfortable seating & smooth handling</p>
+            <!-- Navigation Arrows -->
+            <button id="prev-btn-4pass" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-600 p-2 rounded-full shadow-lg transition-all z-10">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="next-btn-4pass" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-600 p-2 rounded-full shadow-lg transition-all z-10">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            
+            <!-- Thumbnail Strip -->
+            <div class="p-4 bg-gray-50 border-t">
+              <div class="flex gap-2 overflow-x-auto" id="thumbnails-4pass">
+                <button class="flex-shrink-0 thumbnail-btn active" data-index="0">
+                  <img src="/golf cart images/4-passenger-golf-cart-ocala.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-emerald-600 opacity-100" />
+                </button>
+                <button class="flex-shrink-0 thumbnail-btn" data-index="1">
+                  <img src="/golf cart images/4-passenger-golf-cart-rental.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+                </button>
               </div>
             </div>
+          </div>
+          
+          <div class="bg-white p-6" id="image-info-4pass">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3" id="image-title-4pass">Gas-Powered Reliability</h3>
+            <p class="text-gray-600 mb-4" id="image-desc-4pass">Perfect for retirement communities, neighborhoods, and equestrian events. Strong, consistent power with extended range for all-day use.</p>
           </div>
 
           <!-- Specifications -->
@@ -204,4 +203,76 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <script>
+    // Slideshow functionality for 4-passenger
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = [
+        {
+          src: '/golf cart images/4-passenger-golf-cart-ocala.jpg',
+          alt: '4-Passenger Golf Cart',
+          title: 'Gas-Powered Reliability',
+          description: 'Perfect for retirement communities, neighborhoods, and equestrian events. Strong, consistent power with extended range for all-day use.'
+        },
+        {
+          src: '/golf cart images/4-passenger-golf-cart-rental.jpg',
+          alt: '4-Passenger Golf Cart',
+          title: '4-Passenger Comfort',
+          description: 'Spacious and comfortable seating for up to 4 passengers with reliable gas-powered performance.'
+        }
+      ];
+      
+      let currentSlide = 0;
+      const mainImg = document.getElementById('slideshow-main-4pass');
+      const titleEl = document.getElementById('image-title-4pass');
+      const descEl = document.getElementById('image-desc-4pass');
+      const thumbnails = document.querySelectorAll('#thumbnails-4pass .thumbnail-btn');
+      
+      function updateSlide(index: number) {
+        currentSlide = index;
+        const image = images[currentSlide];
+        if (mainImg instanceof HTMLImageElement) {
+          mainImg.src = image.src;
+          mainImg.alt = image.alt;
+        }
+        if (titleEl) titleEl.textContent = image.title;
+        if (descEl) descEl.textContent = image.description;
+        
+        thumbnails.forEach((btn, i) => {
+          const img = btn.querySelector('img');
+          if (img) {
+            if (i === currentSlide) {
+              btn.classList.add('active');
+              img.classList.remove('border-transparent', 'opacity-60');
+              img.classList.add('border-emerald-600', 'opacity-100');
+            } else {
+              btn.classList.remove('active');
+              img.classList.remove('border-emerald-600', 'opacity-100');
+              img.classList.add('border-transparent', 'opacity-60');
+            }
+          }
+        });
+      }
+      
+      const nextBtn = document.getElementById('next-btn-4pass');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          updateSlide((currentSlide + 1) % images.length);
+        });
+      }
+      
+      const prevBtn = document.getElementById('prev-btn-4pass');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          updateSlide((currentSlide - 1 + images.length) % images.length);
+        });
+      }
+      
+      thumbnails.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          updateSlide(index);
+        });
+      });
+    });
+  </script>
 </Layout>
