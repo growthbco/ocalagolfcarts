@@ -81,43 +81,45 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         
-        <!-- Cart Images Gallery -->
+        <!-- Cart Images Gallery with Slideshow -->
         <div>
           <h2 class="text-3xl font-bold text-gray-900 mb-6">Utility Golf Cart Gallery</h2>
           
-          <!-- Main Image -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
+          <!-- Slideshow Gallery -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <!-- Main Slideshow Image -->
             <div class="relative h-96 overflow-hidden">
-              <img src="/golf cart images/2 seater/8585318701482008037.jpg" alt="Utility Gas Golf Cart Rental Ocala - Perfect for Commercial Applications" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Utility Cart</div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Work-Ready Design</h3>
-              <p class="text-gray-600 mb-4">Built for work and versatility with a durable cargo bed and powerful gas engine. Perfect for commercial applications, farms, events, and festivals.</p>
-            </div>
-          </div>
-
-          <!-- Additional Images Grid -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div class="relative h-48 overflow-hidden">
-                <img src="/golf cart images/2 seater/5063143251268795851.jpg" alt="Utility Golf Cart Front View - Durable Cargo Bed and Gas Engine" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4">
-                <h4 class="font-semibold text-gray-900 text-sm">Front View</h4>
-                <p class="text-gray-600 text-xs">Durable cargo bed & gas engine</p>
-              </div>
+              <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">Utility Cart</div>
+              <img id="slideshow-main-utility" src="/golf cart images/2 seater/8585318701482008037.jpg" alt="Utility Golf Cart Gallery" class="w-full h-full object-cover transition-opacity duration-500" />
             </div>
             
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div class="relative h-48 overflow-hidden">
-                <img src="/golf cart images/2 seater/7889926003978922071.jpg" alt="Utility Golf Cart Side View - Versatile Work Design" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4">
-                <h4 class="font-semibold text-gray-900 text-sm">Side View</h4>
-                <p class="text-gray-600 text-xs">Versatile work design</p>
+            <!-- Navigation Arrows -->
+            <button id="prev-btn-utility" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-600 p-2 rounded-full shadow-lg transition-all z-10">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="next-btn-utility" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-600 p-2 rounded-full shadow-lg transition-all z-10">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            
+            <!-- Thumbnail Strip -->
+            <div class="p-4 bg-gray-50 border-t">
+              <div class="flex gap-2 overflow-x-auto" id="thumbnails-utility">
+                <button class="flex-shrink-0 thumbnail-btn active" data-index="0">
+                  <img src="/golf cart images/2 seater/8585318701482008037.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-emerald-600 opacity-100" />
+                </button>
+                <button class="flex-shrink-0 thumbnail-btn" data-index="1">
+                  <img src="/golf cart images/2 seater/5063143251268795851.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+                </button>
+                <button class="flex-shrink-0 thumbnail-btn" data-index="2">
+                  <img src="/golf cart images/2 seater/7889926003978922071.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+                </button>
               </div>
             </div>
+          </div>
+          
+          <div class="bg-white p-6" id="image-info-utility">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3" id="image-title-utility">Work-Ready Design</h3>
+            <p class="text-gray-600 mb-4" id="image-desc-utility">Built for work and versatility with a durable cargo bed and powerful gas engine. Perfect for commercial applications, farms, events, and festivals.</p>
           </div>
 
           <!-- Specifications -->
@@ -285,4 +287,82 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <script>
+    // Slideshow functionality for utility
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = [
+        {
+          src: '/golf cart images/2 seater/8585318701482008037.jpg',
+          alt: 'Utility Golf Cart',
+          title: 'Work-Ready Design',
+          description: 'Built for work and versatility with a durable cargo bed and powerful gas engine. Perfect for commercial applications, farms, events, and festivals.'
+        },
+        {
+          src: '/golf cart images/2 seater/5063143251268795851.jpg',
+          alt: 'Utility Golf Cart Front View',
+          title: 'Front View',
+          description: 'Durable cargo bed and gas engine for reliable utility transportation.'
+        },
+        {
+          src: '/golf cart images/2 seater/7889926003978922071.jpg',
+          alt: 'Utility Golf Cart Side View',
+          title: 'Side View',
+          description: 'Versatile work design perfect for hauling supplies and equipment.'
+        }
+      ];
+      
+      let currentSlide = 0;
+      const mainImg = document.getElementById('slideshow-main-utility');
+      const titleEl = document.getElementById('image-title-utility');
+      const descEl = document.getElementById('image-desc-utility');
+      const thumbnails = document.querySelectorAll('#thumbnails-utility .thumbnail-btn');
+      
+      function updateSlide(index: number) {
+        currentSlide = index;
+        const image = images[currentSlide];
+        if (mainImg instanceof HTMLImageElement) {
+          mainImg.src = image.src;
+          mainImg.alt = image.alt;
+        }
+        if (titleEl) titleEl.textContent = image.title;
+        if (descEl) descEl.textContent = image.description;
+        
+        thumbnails.forEach((btn, i) => {
+          const img = btn.querySelector('img');
+          if (img) {
+            if (i === currentSlide) {
+              btn.classList.add('active');
+              img.classList.remove('border-transparent', 'opacity-60');
+              img.classList.add('border-emerald-600', 'opacity-100');
+            } else {
+              btn.classList.remove('active');
+              img.classList.remove('border-emerald-600', 'opacity-100');
+              img.classList.add('border-transparent', 'opacity-60');
+            }
+          }
+        });
+      }
+      
+      const nextBtn = document.getElementById('next-btn-utility');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          updateSlide((currentSlide + 1) % images.length);
+        });
+      }
+      
+      const prevBtn = document.getElementById('prev-btn-utility');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          updateSlide((currentSlide - 1 + images.length) % images.length);
+        });
+      }
+      
+      thumbnails.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          updateSlide(index);
+        });
+      });
+    });
+  </script>
 </Layout>
