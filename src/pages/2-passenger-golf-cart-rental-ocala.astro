@@ -80,43 +80,51 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         
-        <!-- Cart Images Gallery -->
+        <!-- Cart Images Gallery with Slideshow -->
         <div>
           <h2 class="text-3xl font-bold text-gray-900 mb-6">2-Passenger Golf Cart Gallery in Ocala</h2>
           
-          <!-- Main Image -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-6">
+          <!-- Slideshow Gallery -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <!-- Main Slideshow Image -->
             <div class="relative h-96 overflow-hidden">
-              <img src="/golf cart images/2 seater/5376297149081645384.jpg" alt="2-Passenger Gas Golf Cart Rental Ocala - Club Car Tempo Model" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2-Passenger</div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Club Car Tempo Model</h3>
-              <p class="text-gray-600 mb-4">Modern white Club Car golf cart with LED headlights, comfortable tan seating, and reliable gas-powered performance.</p>
-            </div>
-          </div>
-
-          <!-- Additional Images Grid -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div class="relative h-48 overflow-hidden">
-                <img src="/golf cart images/2 seater/2053877108174006411.jpg" alt="2-Passenger Golf Cart Front View - LED Headlights and Club Car Branding" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4">
-                <h4 class="font-semibold text-gray-900 text-sm">Front View</h4>
-                <p class="text-gray-600 text-xs">LED headlights & Club Car branding</p>
-              </div>
+              <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">2-Passenger</div>
+              <img id="slideshow-main" src="/golf cart images/2 seater/5376297149081645384.jpg" alt="2-Passenger Golf Cart Gallery" class="w-full h-full object-cover transition-opacity duration-500" />
             </div>
             
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div class="relative h-48 overflow-hidden">
-                <img src="/golf cart images/2 seater/2020895730177759096.jpg" alt="2-Passenger Golf Cart Side View - Tan Seating and Tempo Branding" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4">
-                <h4 class="font-semibold text-gray-900 text-sm">Side View</h4>
-                <p class="text-gray-600 text-xs">Comfortable tan seating & Tempo model</p>
+            <!-- Navigation Arrows -->
+            <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-600 p-2 rounded-full shadow-lg transition-all z-10">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-600 p-2 rounded-full shadow-lg transition-all z-10">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            
+            <!-- Thumbnail Strip -->
+            <div class="p-4 bg-gray-50 border-t">
+              <div class="flex gap-2 overflow-x-auto" id="thumbnails">
+                <button class="flex-shrink-0 thumbnail-btn active" data-index="0">
+                  <img src="/golf cart images/2 seater/5376297149081645384.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-emerald-600 opacity-100" />
+                </button>
+                <button class="flex-shrink-0 thumbnail-btn" data-index="1">
+                  <img src="/golf cart images/2 seater/2053877108174006411.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+                </button>
+                <button class="flex-shrink-0 thumbnail-btn" data-index="2">
+                  <img src="/golf cart images/2 seater/2020895730177759096.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+                </button>
+                <button class="flex-shrink-0 thumbnail-btn" data-index="3">
+                  <img src="/golf cart images/2 seater/1933077952967162494.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+                </button>
+                <button class="flex-shrink-0 thumbnail-btn" data-index="4">
+                  <img src="/golf cart images/2 seater/8236133676716185003.jpg" alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+                </button>
               </div>
             </div>
+          </div>
+          
+          <div class="bg-white p-6" id="image-info">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3" id="image-title">Club Car Tempo Model</h3>
+            <p class="text-gray-600 mb-4" id="image-desc">Modern white Club Car golf cart with LED headlights, comfortable tan seating, and reliable gas-powered performance.</p>
           </div>
 
           <!-- Specifications -->
@@ -203,4 +211,88 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <script>
+    // Slideshow functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = [
+        {
+          src: '/golf cart images/2 seater/5376297149081645384.jpg',
+          alt: 'Club Car Tempo 2-Passenger Gas Golf Cart',
+          title: 'Club Car Tempo Model',
+          description: 'Modern white Club Car golf cart with LED headlights, comfortable tan seating, and reliable gas-powered performance.'
+        },
+        {
+          src: '/golf cart images/2 seater/2053877108174006411.jpg',
+          alt: '2-Passenger Golf Cart Front View',
+          title: 'Front View',
+          description: 'LED headlights and Club Car branding for safe nighttime operation.'
+        },
+        {
+          src: '/golf cart images/2 seater/2020895730177759096.jpg',
+          alt: '2-Passenger Golf Cart Side View',
+          title: 'Side View',
+          description: 'Comfortable tan seating and Tempo model styling for a premium experience.'
+        },
+        {
+          src: '/golf cart images/2 seater/1933077952967162494.jpg',
+          alt: '2-Passenger Golf Cart Interior',
+          title: 'Interior',
+          description: 'Spacious interior with comfortable seating for two passengers.'
+        },
+        {
+          src: '/golf cart images/2 seater/8236133676716185003.jpg',
+          alt: '2-Passenger Golf Cart Rear View',
+          title: 'Rear View',
+          description: 'Compact and efficient design perfect for tight spaces and easy maneuverability.'
+        }
+      ];
+      
+      let currentSlide = 0;
+      const mainImg = document.getElementById('slideshow-main');
+      const titleEl = document.getElementById('image-title');
+      const descEl = document.getElementById('image-desc');
+      const thumbnails = document.querySelectorAll('.thumbnail-btn');
+      
+      function updateSlide(index) {
+        currentSlide = index;
+        const image = images[currentSlide];
+        mainImg.src = image.src;
+        mainImg.alt = image.alt;
+        titleEl.textContent = image.title;
+        descEl.textContent = image.description;
+        
+        // Update thumbnails
+        thumbnails.forEach((btn, i) => {
+          const img = btn.querySelector('img');
+          if (i === currentSlide) {
+            btn.classList.add('active');
+            img.classList.remove('border-transparent', 'opacity-60');
+            img.classList.add('border-emerald-600', 'opacity-100');
+          } else {
+            btn.classList.remove('active');
+            img.classList.remove('border-emerald-600', 'opacity-100');
+            img.classList.add('border-transparent', 'opacity-60');
+          }
+        });
+      }
+      
+      // Next button
+      document.getElementById('next-btn').addEventListener('click', () => {
+        updateSlide((currentSlide + 1) % images.length);
+      });
+      
+      // Previous button
+      document.getElementById('prev-btn').addEventListener('click', () => {
+        updateSlide((currentSlide - 1 + images.length) % images.length);
+      });
+      
+      // Thumbnail clicks
+      thumbnails.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          updateSlide(index);
+        });
+      });
+    });
+  </script>
 </Layout>
