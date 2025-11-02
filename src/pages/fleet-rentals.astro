@@ -22,7 +22,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Main Slideshow Image -->
         <div class="relative h-[500px] overflow-hidden">
           <div class="absolute top-4 left-4 bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold z-10">Our Fleet</div>
-          <img id="fleet-slideshow-main" src="/golf cart images/fleet-aerial-1.jpg" alt="Fleet Gallery" class="w-full h-full object-cover transition-opacity duration-500" />
+          <img id="fleet-slideshow-main" src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:44:56.jpg" alt="Fleet Gallery" class="w-full h-full object-cover transition-opacity duration-500" />
           
           <!-- Navigation Arrows -->
           <button id="fleet-prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-emerald-600 p-3 rounded-full shadow-lg transition-all z-20">
@@ -37,22 +37,31 @@ import Layout from '../layouts/Layout.astro';
         <div class="p-4 bg-gray-50 border-t">
           <div class="flex gap-3 justify-center overflow-x-auto" id="fleet-thumbnails">
             <button class="flex-shrink-0 fleet-thumbnail-btn active" data-index="0">
-              <img src="/golf cart images/fleet-aerial-1.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-emerald-600 opacity-100" />
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:44:56.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-emerald-600 opacity-100" />
             </button>
             <button class="flex-shrink-0 fleet-thumbnail-btn" data-index="1">
-              <img src="/golf cart images/fleet-aerial-2.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:44:57.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
             </button>
             <button class="flex-shrink-0 fleet-thumbnail-btn" data-index="2">
-              <img src="/golf cart images/fleet-aerial-3.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:44:59.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
             </button>
             <button class="flex-shrink-0 fleet-thumbnail-btn" data-index="3">
-              <img src="/golf cart images/fleet-aerial-4.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:00.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
             </button>
             <button class="flex-shrink-0 fleet-thumbnail-btn" data-index="4">
-              <img src="/golf cart images/fleet-aerial-5.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:02.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
             </button>
             <button class="flex-shrink-0 fleet-thumbnail-btn" data-index="5">
-              <img src="/golf cart images/fleet-aerial-6.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:03.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+            </button>
+            <button class="flex-shrink-0 fleet-thumbnail-btn" data-index="6">
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:04.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+            </button>
+            <button class="flex-shrink-0 fleet-thumbnail-btn" data-index="7">
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:05.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
+            </button>
+            <button class="flex-shrink-0 fleet-thumbnail-btn" data-index="8">
+              <img src="/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:06.jpg" alt="Thumbnail" class="w-24 h-24 object-cover rounded-lg border-2 border-transparent opacity-60 hover:opacity-80" />
             </button>
           </div>
         </div>
@@ -485,12 +494,15 @@ import Layout from '../layouts/Layout.astro';
     // Fleet slideshow functionality
     document.addEventListener('DOMContentLoaded', function() {
       const fleetImages = [
-        { src: '/golf cart images/fleet-aerial-1.jpg', alt: 'Large Golf Cart Fleet - Aerial View 1' },
-        { src: '/golf cart images/fleet-aerial-2.jpg', alt: 'Large Golf Cart Fleet - Aerial View 2' },
-        { src: '/golf cart images/fleet-aerial-3.jpg', alt: 'Large Golf Cart Fleet - Aerial View 3' },
-        { src: '/golf cart images/fleet-aerial-4.jpg', alt: 'Large Golf Cart Fleet - Aerial View 4' },
-        { src: '/golf cart images/fleet-aerial-5.jpg', alt: 'Large Golf Cart Fleet - Aerial View 5' },
-        { src: '/golf cart images/fleet-aerial-6.jpg', alt: 'Large Golf Cart Fleet - Aerial View 6' }
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:44:56.jpg', alt: 'Large Golf Cart Fleet - Aerial View 1' },
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:44:57.jpg', alt: 'Large Golf Cart Fleet - Aerial View 2' },
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:44:59.jpg', alt: 'Large Golf Cart Fleet - Aerial View 3' },
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:00.jpg', alt: 'Large Golf Cart Fleet - Aerial View 4' },
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:02.jpg', alt: 'Large Golf Cart Fleet - Aerial View 5' },
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:03.jpg', alt: 'Large Golf Cart Fleet - Aerial View 6' },
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:04.jpg', alt: 'Large Golf Cart Fleet - Aerial View 7' },
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:05.jpg', alt: 'Large Golf Cart Fleet - Aerial View 8' },
+        { src: '/golf cart images/2 seater/Fleets/IMAGE 2025-11-02 11:45:06.jpg', alt: 'Large Golf Cart Fleet - Aerial View 9' }
       ];
       
       let currentFleetSlide = 0;
