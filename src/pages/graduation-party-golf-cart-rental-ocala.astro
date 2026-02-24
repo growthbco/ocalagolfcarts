@@ -31,6 +31,32 @@ import Layout from '../layouts/Layout.astro';
     }
   }
   </script>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://golfcartrentalocala.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Events",
+        "item": "https://golfcartrentalocala.com/events/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Graduations",
+        "item": "https://golfcartrentalocala.com/graduation-party-golf-cart-rental-ocala/"
+      }
+    ]
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-indigo-600 via-blue-600 to-purple-700 text-white py-16 relative overflow-hidden">
     <div class="absolute inset-0 bg-black opacity-20"></div>

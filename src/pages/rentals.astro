@@ -2,7 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Golf Cart Rentals Ocala | Daily, Weekly & Monthly Packages | Ocala Golf Carts">
+<Layout title="Golf Cart Rentals Ocala | All Rental Packages" description="Browse all golf cart rental packages in Ocala, FL. 2, 4, and 6-passenger gas-powered carts. 3-day, weekly & monthly options. Free delivery. Call (352) 780-1526.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://golfcartrentalocala.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Rentals",
+        "item": "https://golfcartrentalocala.com/rentals/"
+      }
+    ]
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

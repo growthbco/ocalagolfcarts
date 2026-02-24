@@ -2,7 +2,62 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Utility Golf Cart Rentals Ocala FL | Commercial & Work Carts | Ocala Golf Carts">
+<Layout title="Utility Golf Cart Rentals Ocala FL | Work Carts" description="Rent a utility golf cart with cargo bed in Ocala, FL. Built for work — hauling, landscaping, event setup & commercial use. Gas-powered. Free delivery.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Utility Golf Cart Rental",
+    "description": "Utility golf cart rental with cargo bed for commercial and work use in Ocala, FL.",
+    "url": "https://golfcartrentalocala.com/utility-golf-cart-rental-ocala/",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Ocala Golf Cart Rentals",
+      "telephone": "+13527801526",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ocala",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Ocala",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Florida"
+      }
+    },
+    "category": "Golf Cart Rental"
+  }
+  </script>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://golfcartrentalocala.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Rentals",
+        "item": "https://golfcartrentalocala.com/rentals/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Utility Golf Cart",
+        "item": "https://golfcartrentalocala.com/utility-golf-cart-rental-ocala/"
+      }
+    ]
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

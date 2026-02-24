@@ -2,7 +2,62 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Horse Show Golf Cart Rentals Ocala | Equestrian Event Transportation | Ocala Golf Carts">
+<Layout title="Horse Show Golf Cart Rentals Ocala | Equestrian Events" description="Golf cart rentals for horse shows and equestrian events in Ocala. Reliable gas-powered carts for competitors, spectators & vendors. Multi-day discounts available.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Horse Show Golf Cart Rental",
+    "description": "Golf cart rental service for horse shows and equestrian events in Ocala, FL.",
+    "url": "https://golfcartrentalocala.com/horse-show-golf-cart-rental/",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Ocala Golf Cart Rentals",
+      "telephone": "+13527801526",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ocala",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Ocala",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Florida"
+      }
+    },
+    "category": "Golf Cart Rental"
+  }
+  </script>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://golfcartrentalocala.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Events",
+        "item": "https://golfcartrentalocala.com/events/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Horse Shows",
+        "item": "https://golfcartrentalocala.com/horse-show-golf-cart-rental/"
+      }
+    ]
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

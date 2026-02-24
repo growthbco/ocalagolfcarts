@@ -2,7 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Event Golf Cart Rentals | WEC, Weddings, Halloween & More | Ocala Golf Cart Rentals">
+<Layout title="Event Golf Cart Rentals Ocala | WEC, Weddings & More" description="Golf cart rentals for Ocala events — WEC, weddings, horse shows, Halloween, corporate events & more. Fleet packages available. Call (352) 780-1526 to book.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://golfcartrentalocala.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Events",
+        "item": "https://golfcartrentalocala.com/events/"
+      }
+    ]
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -2,7 +2,62 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Weekly Golf Cart Rentals Ocala | 7-Day Rental Packages">
+<Layout title="Weekly Golf Cart Rentals Ocala | 7-Day Packages" description="Weekly golf cart rentals in Ocala starting at competitive rates. Best value for extended stays, vacations & week-long events. Gas-powered carts, free delivery.">
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Weekly Golf Cart Rental",
+    "description": "7-day weekly golf cart rental in Ocala, FL. Best value for extended stays and week-long events.",
+    "url": "https://golfcartrentalocala.com/weekly-rental/",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Ocala Golf Cart Rentals",
+      "telephone": "+13527801526",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ocala",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Ocala",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Florida"
+      }
+    },
+    "category": "Golf Cart Rental"
+  }
+  </script>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://golfcartrentalocala.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Rentals",
+        "item": "https://golfcartrentalocala.com/rentals/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Weekly Rental",
+        "item": "https://golfcartrentalocala.com/weekly-rental/"
+      }
+    ]
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
