@@ -7,7 +7,7 @@ export interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { title, description = "Premium golf cart rentals in Ocala, Florida. Explore Ocala in style with our reliable and comfortable golf carts.", image = "https://golfcartrentalocala.com/golf cart images/imageGCRO.png", type = "website" } = Astro.props;
+const { title, description = "Premium golf cart rentals in Ocala, Florida. Explore Ocala in style with our reliable and comfortable golf carts.", image = "https://golfcartrentalocala.com/golf%20cart%20images/imageGCRO.png", type = "website" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -349,7 +349,7 @@ window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
       "paymentAccepted": ["Cash", "Credit Card"],
       "currenciesAccepted": "USD",
       "priceRange": "$$",
-      "foundingDate": "2024",
+      "foundingDate": "2023",
       "slogan": "Premium Golf Cart Rentals for Ocala Events",
       "knowsAbout": [
         "Golf Cart Rentals",

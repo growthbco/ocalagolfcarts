@@ -126,5 +126,37 @@ export const sitemapConfig: Record<string, SitemapConfig> = {
   '/about/': {
     priority: 0.6,
     changefreq: 'monthly'
+  },
+
+  // Location/Community pages
+  '/downtown-ocala-golf-cart-rental/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/otow-golf-cart-rental/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/stone-creek-golf-cart-rental/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/golden-ocala-golf-cart-rental/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  '/ocala-country-club-golf-cart-rental/': {
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+
+  // Legal pages - low priority
+  '/privacy-policy/': {
+    priority: 0.3,
+    changefreq: 'yearly'
+  },
+  '/terms-conditions/': {
+    priority: 0.3,
+    changefreq: 'yearly'
   }
 };
