@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Golf Cart Rentals Ocala | All Rental Packages" description="Browse all golf cart rental packages in Ocala, FL. 2, 4, and 6-passenger gas-powered carts. 3-day, weekly & monthly options. Free delivery. Call (352) 780-1526.">
+<Layout title="Golf Cart Rentals Ocala | All Rental Packages" description="Browse all golf cart rental packages in Ocala, FL. 2, 4, and 6-passenger gas-powered carts. Weekly & monthly options. Free delivery. Call (352) 780-1526.">
   <script type="application/ld+json" slot="head">
   {
     "@context": "https://schema.org",
@@ -38,47 +38,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Pricing Cards -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Daily Rental -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div class="bg-emerald-600 text-white p-6 text-center">
-            <h3 class="text-2xl font-bold mb-2">3-Day Rental</h3>
-            <div class="text-4xl font-bold mb-2">Call for Pricing</div>
-            <p class="text-emerald-100">3-day minimum required</p>
-          </div>
-          <div class="p-6">
-            <ul class="space-y-3 mb-6">
-              <li class="flex items-center">
-                <svg class="w-5 h-5 text-emerald-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                4-6 passenger capacity
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 text-emerald-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Perfect for day trips
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 text-emerald-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Free pickup & delivery
-              </li>
-              <li class="flex items-center">
-                <svg class="w-5 h-5 text-emerald-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                24-hour rental period
-              </li>
-            </ul>
-            <a href="/contact" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-colors">
-              Book 3-Day Rental
-            </a>
-          </div>
-        </div>
-
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- Weekly Rental -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-emerald-600 relative">
           <div class="absolute top-0 right-0 bg-emerald-600 text-white px-4 py-1 text-sm font-semibold">
@@ -119,7 +79,7 @@ import Layout from '../layouts/Layout.astro';
                 <svg class="w-5 h-5 text-emerald-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                10% savings vs daily
+                Great weekly value
               </li>
             </ul>
             <a href="/contact" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-colors">
@@ -165,7 +125,7 @@ import Layout from '../layouts/Layout.astro';
                 <svg class="w-5 h-5 text-emerald-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
-                25% savings vs daily
+                Best monthly rates
               </li>
             </ul>
             <a href="/contact" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-colors">

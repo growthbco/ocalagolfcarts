@@ -15,10 +15,6 @@ export const sitemapConfig: Record<string, SitemapConfig> = {
     priority: 0.9,
     changefreq: 'weekly'
   },
-  '/3-day-rental/': {
-    priority: 0.9,
-    changefreq: 'weekly'
-  },
   '/weekly-rental/': {
     priority: 0.9,
     changefreq: 'weekly'
