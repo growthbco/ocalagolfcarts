@@ -57,6 +57,12 @@
   to = "/3-day-rental"
   status = 301
 
+# Lithium battery page removed - redirect to home
+[[redirects]]
+  from = "/lithium-golf-cart-batteries-ocala"
+  to = "/"
+  status = 301
+
 # SPA fallback for all other routes
 [[redirects]]
   from = "/*"
