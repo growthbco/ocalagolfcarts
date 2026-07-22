@@ -24,12 +24,6 @@ export const sitemapConfig: Record<string, SitemapConfig> = {
     changefreq: 'weekly'
   },
   
-  // Lithium battery service - high priority
-  '/lithium-golf-cart-batteries-ocala/': {
-    priority: 0.9,
-    changefreq: 'weekly'
-  },
-
   // Fleet/Vehicle pages - high priority
   '/2-passenger-golf-cart-rental-ocala/': {
     priority: 0.8,
