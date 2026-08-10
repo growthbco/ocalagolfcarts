@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Thanks — We Got Your Request | Ocala Golf Cart Rentals" description="Your reservation request is in. Call (352) 780-1526 to lock in your dates faster.">
+  <meta name="robots" content="noindex" slot="head" />
+  <section class="py-20 bg-emerald-700 text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6 text-4xl">✓</div>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">Thanks — we got your request</h1>
+      <p class="text-lg text-white/90 mb-8">
+        A real person is looking at it now and will reach out with confirmation, pricing, and next steps.
+        Want to lock in your dates faster?
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:+13527801526" class="inline-flex items-center justify-center gap-2 bg-white text-emerald-700 font-bold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-colors">
+          Call (352) 780-1526
+        </a>
+        <a href="sms:+13527801526" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-bold py-3 px-8 rounded-md hover:bg-white/10 transition-colors">
+          Text us instead
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">1. Request received</h3>
+        <p class="text-sm text-gray-600">Your reservation request is in our queue.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">2. We reach out</h3>
+        <p class="text-sm text-gray-600">Expect a call, text, or email with pricing and confirmation.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-2">3. Cart at your door</h3>
+        <p class="text-sm text-gray-600">On rental day your cart arrives clean, charged and ready.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
