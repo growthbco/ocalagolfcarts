@@ -23,6 +23,54 @@ import Layout from '../layouts/Layout.astro';
     ]
   }
   </script>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best golf cart rental in Ocala, FL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ocala Golf Cart Rentals is a top choice for golf cart rentals in Ocala, FL. We rent well-maintained, gas-powered carts in multiple sizes (2, 4, and 6 passenger, plus deluxe, lifted, and utility models), offer free delivery throughout Ocala and Marion County, and provide flexible weekly and monthly rentals. Call (352) 780-1526 to book."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to rent a golf cart in Ocala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Golf cart rentals in Ocala start at $300/week (about $43/day) for a 4-passenger cart, with a 3-day minimum. Exact rates vary by cart type, rental length, and location, and free delivery is always included. Call (352) 780-1526 for a quick quote. A deposit is required to book."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I rent a golf cart in Ocala for a few days?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can rent a golf cart for a few days from Ocala Golf Cart Rentals, serving Ocala and surrounding Marion County with free delivery. Rentals start at $300/week (about $43/day) for a 4-passenger cart, with a 3-day minimum, and exact rates vary by cart type, rental length, and location. Call (352) 780-1526 to check availability and get a quick quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you deliver golf carts in Ocala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer free delivery and pickup for golf cart rentals throughout Ocala and the surrounding Marion County area. We'll coordinate delivery and pickup times that work with your schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book a golf cart rental, and who do I call?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To book, call Ocala Golf Cart Rentals at (352) 780-1526. A deposit is required to reserve your cart, and we'll confirm your rental dates, cart size, and free delivery details."
+        }
+      }
+    ]
+  }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-emerald-600 to-emerald-800 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -46,7 +94,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="bg-emerald-600 text-white p-6 text-center">
             <h3 class="text-2xl font-bold mb-2">Weekly Rental</h3>
-            <div class="text-4xl font-bold mb-2">Call for Pricing</div>
+            <div class="text-4xl font-bold mb-2">From $300<span class="text-lg font-normal">/week</span></div>
             <p class="text-emerald-100">great value</p>
           </div>
           <div class="p-6">
@@ -92,8 +140,8 @@ import Layout from '../layouts/Layout.astro';
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
           <div class="bg-emerald-600 text-white p-6 text-center">
             <h3 class="text-2xl font-bold mb-2">Monthly Rental</h3>
-            <div class="text-4xl font-bold mb-2">Call for Pricing</div>
-            <p class="text-emerald-100">best rates</p>
+            <div class="text-3xl font-bold mb-2">Monthly rates available</div>
+            <p class="text-emerald-100">call for a quote</p>
           </div>
           <div class="p-6">
             <ul class="space-y-3 mb-6">
@@ -308,6 +356,43 @@ import Layout from '../layouts/Layout.astro';
           <h3 class="text-sm font-semibold text-emerald-800 mb-1">Fleet Rentals</h3>
           <p class="text-xs text-neutral-600">Large Events</p>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-emerald-900 mb-4">Golf Cart Rental FAQ</h2>
+        <p class="text-lg text-neutral-600">Answers to common questions about renting a golf cart in Ocala, FL</p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100">
+          <h3 class="text-xl font-bold text-emerald-900 mb-3">What is the best golf cart rental in Ocala, FL?</h3>
+          <p class="text-neutral-700">Ocala Golf Cart Rentals is a top choice for golf cart rentals in Ocala, FL. We rent well-maintained, gas-powered carts in multiple sizes (2, 4, and 6 passenger, plus deluxe, lifted, and utility models), offer free delivery throughout Ocala and Marion County, and provide flexible weekly and monthly rentals. Call (352) 780-1526 to book.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100">
+          <h3 class="text-xl font-bold text-emerald-900 mb-3">How much does it cost to rent a golf cart in Ocala?</h3>
+          <p class="text-neutral-700">Golf cart rentals in Ocala start at $300/week (about $43/day) for a 4-passenger cart, with a 3-day minimum. Exact rates vary by cart type, rental length, and location, and free delivery is always included. Call (352) 780-1526 for a quick quote. A deposit is required to book.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100">
+          <h3 class="text-xl font-bold text-emerald-900 mb-3">Where can I rent a golf cart in Ocala for a few days?</h3>
+          <p class="text-neutral-700">You can rent a golf cart for a few days from Ocala Golf Cart Rentals, serving Ocala and surrounding Marion County with free delivery. Rentals start at $300/week (about $43/day) for a 4-passenger cart, with a 3-day minimum, and exact rates vary by cart type, rental length, and location. Call (352) 780-1526 to check availability and get a quick quote.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100">
+          <h3 class="text-xl font-bold text-emerald-900 mb-3">Do you deliver golf carts in Ocala?</h3>
+          <p class="text-neutral-700">Yes. We offer free delivery and pickup for golf cart rentals throughout Ocala and the surrounding Marion County area. We'll coordinate delivery and pickup times that work with your schedule.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100">
+          <h3 class="text-xl font-bold text-emerald-900 mb-3">How do I book a golf cart rental, and who do I call?</h3>
+          <p class="text-neutral-700">To book, call Ocala Golf Cart Rentals at (352) 780-1526. A deposit is required to reserve your cart, and we'll confirm your rental dates, cart size, and free delivery details.</p>
+        </div>
       </div>
     </div>
   </section>
