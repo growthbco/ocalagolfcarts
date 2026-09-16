@@ -10,6 +10,8 @@ export default defineConfig({
     tailwind(), 
     sitemap({
       customPages: [],
+      // Confirmation pages are noindex and should not be submitted for search.
+      filter: (page) => new URL(page).pathname.replace(/\/$/, "") !== "/thank-you",
       serialize(item) {
         const path = new URL(item.url).pathname;
         const config = sitemapConfig[path];
